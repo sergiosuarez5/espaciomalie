@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 :root {
   --primary-color: #c38c81;
   --primary-color-dark: #f7ebf3;
@@ -19,7 +18,7 @@
 .section__container {
   max-width: var(--max-width);
   margin: auto;
-  padding: 5rem 1rem;
+  padding: 1.5rem 1rem;
 }
 
 .top-bar {
@@ -47,14 +46,20 @@
 }
 
 .section__header {
-  font-size: 3rem;
-  font-weight: 300;
+  font-size: 1.6rem;
+  font-weight: 200;
+  padding: 10px;
   text-align: center;
-  color: var(--text-dark);
+  color: var(--primary-color);
+}
+.section__header h2{
+  font-size: 1rem;
+  text-align: center;
+  color: var(--primary-color);
 }
 
 .section__subheader {
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 300;
   text-align: center;
   color: var(--text-light);
@@ -156,16 +161,13 @@ header::before {
   z-index: 1;
 }
 
-.header__content h1 {
-  margin-bottom: 1rem;
-  font-size: 4rem;
-  font-weight: 300;
-  color: var(--text-dark);
+.header__content .logo_malie {
+width: 80px;
 }
 
-.header__content h2 {
+.header__content h3 {
   margin-bottom: 2rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 300;
   color: var(--text-light);
 }
@@ -221,15 +223,26 @@ header::before {
   gap: 2rem;
 }
 
+.hero__card {
+  text-align: center; /* ESTA LÍNEA CENTRA EL TEXTO Y EL SPAN */
+}
+
+
 .hero__card span {
+  margin-left: auto;   /* Agrega esto */
+  margin-right: auto;  /* Agrega esto */
   margin-bottom: 1rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 75px;
+  width: 70px;
   aspect-ratio: 1;
-  background-color: var(--primary-color-dark);
+  background-color: #c38c8150;
   border-radius: 100%;
+}
+
+.hero__card .iconos{
+  color: var(--primary-color);
 }
 
 .hero__card span img {
@@ -402,27 +415,33 @@ header::before {
 }
 
 .banner {
-  padding: 5rem 0;
   background-image: linear-gradient(to right, var(--primary-color), transparent),
-    url("assets/46-banner.png");
+    ;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
+
+iframe {
+  width: 100%;
+  height: 200px;
+  border-radius: 100px 100px 100px 100px;
+  padding: 20px 55px;
+}
+
 .banner__container {
   max-width: 900px;
-  display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
   text-align: center;
 }
 
 .banner__card h4 {
-  margin-bottom: 1rem;
-  font-size: 3rem;
-  font-weight: 500;
-  color: var(--white);
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #c38c81;
 }
 
 .banner__card p {
@@ -495,10 +514,9 @@ header::before {
   gap: 2rem;
 }
 
-.footer__logo a {
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: var(--white);
+.footer__logo .malie_logo{
+  text-align: center;
+  width: 50px;
 }
 
 .footer__col p {
@@ -527,9 +545,33 @@ header::before {
 }
 
 .footer__bar {
-  font-size: 0.9rem;
+  font-size: 0.5rem;
   color: var(--white);
   text-align: center;
+}
+
+/* Contenedor para centrar el logo SH */
+.footer__sh-container {
+  display: flex;
+  justify-content: center; /* Lo centra horizontalmente */
+  align-items: center;
+  margin-top: 15px;        /* Espacio respecto al texto de Copyright */
+  width: 100%;
+}
+
+/* Ajuste de la imagen */
+.footer .img_sh {
+  width: 60px;             /* Mantengo el tamaño que ya tenías */
+  height: auto;
+  display: block;
+}
+
+/* Asegúrate de que la barra de copyright permita elementos debajo */
+.footer__bar {
+  display: flex;
+  flex-direction: column;  /* Alinea el texto y luego el logo SH abajo */
+  align-items: center;
+  gap: 10px;
 }
 
 @media (width < 900px) {
@@ -598,6 +640,11 @@ header::before {
   .footer__socials {
     justify-content: center;
   }
+  .footer__col {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el logo y textos en la columna del footer */
+  }
 }
 
 @media (width < 750px) {
@@ -660,7 +707,7 @@ header::before {
 }
 .schedule-main-title {
     font-size: 3rem; /* Tamaño grande y legible */
-    color: #343434; /* Gris oscuro */
+    color: #343434de; /* Gris oscuro */
     margin: 0;
     line-height: 1;
 }
@@ -671,7 +718,7 @@ header::before {
 }
 .schedule-year {
     font-size: 2rem;
-    color: #232323; /* Color crema suave */
+    color: #232323e4; /* Color crema suave */
     font-weight: 500;
 }
 
@@ -695,10 +742,12 @@ header::before {
 /* ========== TARJETAS Y FLECHA ========== */
 .mobile-arrow {
     display: none; /* Oculta en desktop */
-    font-size: 10px;
     margin-top: 4px;
     color: #2d1f1a;
     transition: transform 0.3s;
+}
+.mobile-arrow i {
+    font-size: 15px;
 }
 
 .day-label {
@@ -808,6 +857,36 @@ header::before {
     }
 }
 /* ========== SCROLL UP ========== */
+/* Contenedor del Scroll Up */
+.scroll-up {
+  position: fixed;
+  right: 20px;            /* Alineado a la derecha igual que el de WhatsApp */
+  bottom: 20px;           /* Distancia desde el suelo de la pantalla */
+  background-color: var(--primary-color); /* Color de fondo (cámbialo a tu gusto) */
+  color: #fff;            /* Color de la flecha */
+  padding: 15px;
+  display: flex;
+  border-radius: 50%;     /* Lo hace circular */
+  font-size: 1.3rem;      /* Tamaño de la flecha */
+  z-index: 1000;          /* Para que siempre esté por encima de otros elementos */
+  transition: .4s;        /* Animación suave al pasar el mouse */
+  text-decoration: none;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para destacar */
+}
+
+/* Efecto Hover */
+.scroll-up:hover {
+  transform: translateY(-5px); /* Pequeño salto al poner el mouse */
+  background-color: #444;
+}
+
+/* AJUSTE PARA EL BOTÓN DE WHATSAPP */
+/* Para que no se encimen, busca la clase de tu botón de WhatsApp 
+   y sube su posición 'bottom'. Por ejemplo:
+*/
+.boton-whatsapp-clase { 
+  bottom: 80px !important; /* Lo subimos para dejar espacio a la flecha abajo */
+}
 
 .btn-whatsapp {
   position: fixed;
@@ -815,12 +894,13 @@ header::before {
      que quede exactamente arriba de tu flecha de scroll */
   bottom: 80px; 
   right: 20px;
-  background-color: #25d366; /* Verde oficial de WhatsApp */
+  background-color: #25d3c1; /* Verde oficial de WhatsApp */
   color: white;
-  width: 55px;
-  height: 55px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   display: flex;
+  bottom: 80px !important; /* Lo subimos a 90px para dejar espacio */
   justify-content: center;
   align-items: center;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
@@ -831,8 +911,49 @@ header::before {
 
 /* Efecto al pasar el mouse por encima */
 .btn-whatsapp:hover {
-  background-color: #1ebe57;
+  background-color: #1ebeb1;
   transform: scale(1.1);
   color: white;
 }
 
+/* Estilos base para el botón (oculto en desktop) */
+.nav__menu__btn {
+  display: none;
+  font-size: 1.5rem;
+  color: var(--text-dark);
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .nav__menu__btn {
+    display: block; /* Aparece en móvil */
+    z-index: 1001;
+  }
+
+  .nav__links {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--white);
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+    z-index: 1000;
+    /* Efecto de aparecer/desaparecer */
+    transform: translateY(-100%);
+    transition: transform 0.5s ease;
+    display: flex; /* Cambiamos el display:none que tenías antes */
+  }
+
+  /* Clase que activaremos con JS */
+  .nav__links.open {
+    transform: translateY(0);
+  }
+
+  .link a {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+}
