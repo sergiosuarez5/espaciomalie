@@ -1,0 +1,24 @@
+{
+  "name": "pagina-malie",
+  "version": "1.0.0",
+  "description": "Create an Engaging Yoga Classes Landing Page | HTML, CSS &amp; JS Tutorial with ScrollReveal Animations!",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sergiosuarez5/espaciomalie.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/sergiosuarez5/espaciomalie/issues"
+  },
+  "homepage": "https://github.com/sergiosuarez5/espaciomalie#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.8"
+  }
+}

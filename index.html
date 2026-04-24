@@ -7,6 +7,9 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
       rel="stylesheet"
     />
+    <!-- CSS en el <head> -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css" />
     <script src="https://unpkg.com/scrollreveal"></script>
@@ -36,7 +39,7 @@
 </nav>    <header id="home">
       <div class="section__container header__container">
         <div class="header__content">
-          <h3>Un espacio para <em>el cuerpo, <br>la mente y el alma</em></h3>
+          <h3>"Un espacio para <em>el cuerpo, <br>la mente y el alma"</em></h3>
           <a href="#horarios"><button class="btn">¡Probá tu primera clase!</button></a>
         </div>
         <div class="header__image">
@@ -77,7 +80,7 @@
       </div>
     </section>
 
-    <section class="hero" id="hero">
+<!--     <section class="hero" id="hero">
       <div class="section__container hero__container">
         <div class="hero__card">
           <span><i class="fa-solid fa-heart iconos"></i></span>
@@ -109,6 +112,113 @@
         </div>
       </div>
     </section>
+ -->    <!-- CARROUSEL ACTIVIDADES -->
+    <section class="yoga-carousel-section">
+  <div class="container">
+
+    <!-- Encabezado -->
+    <div class="text-center mb-4">
+      <p class="section-eyebrow">Actividades</p>
+      <h2 class="section-title">Lo que vivimos <em>juntos</em></h2>
+      <hr class="section-divider mx-auto">
+    </div>
+
+    <!-- Carrusel -->
+    <div id="yogaCarousel"
+         class="carousel slide yoga-carousel"
+         data-bs-ride="carousel"
+         data-bs-interval="5000">
+
+      <!-- Indicadores -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#yogaCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#yogaCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#yogaCarousel" data-bs-slide-to="2"></button>
+        <button type="button" data-bs-target="#yogaCarousel" data-bs-slide-to="3"></button>
+        <button type="button" data-bs-target="#yogaCarousel" data-bs-slide-to="4"></button>
+        <button type="button" data-bs-target="#yogaCarousel" data-bs-slide-to="5"></button>
+        <button type="button" data-bs-target="#yogaCarousel" data-bs-slide-to="6"></button>
+      </div>
+
+      <!-- Slides -->
+      <div class="carousel-inner">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="carousel-img-wrap">
+            <!--
+              Reemplazá este src con tu imagen real.
+              Ejemplo: src="img/clase-hatha.jpg"
+              Tamaño recomendado: 1200×700 px
+            -->
+            <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1200&q=80"
+                 alt="Clase de Hatha Yoga">
+          </div>
+          <div class="yoga-caption">
+            <span class="yoga-caption-tag">Hatha Yoga</span>
+            <h3>Retiro de apertura – Otoño 2024</h3>
+            <p>Dos jornadas en silencio para reconectar con el cuerpo, la respiración y la calma interior.</p>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="carousel-img-wrap">
+            <img src="https://images.unsplash.com/photo-1545389336-cf090694435e?w=1200&q=80"
+                 alt="Clase de Meditación">
+          </div>
+          <div class="yoga-caption">
+            <span class="yoga-caption-tag">Meditación</span>
+            <h3>Círculo de meditación guiada</h3>
+            <p>Encuentros semanales donde exploramos distintas técnicas de mindfulness y respiración consciente.</p>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+          <div class="carousel-img-wrap">
+            <img src="https://images.unsplash.com/photo-1588286840104-8957b019727f?w=1200&q=80"
+                 alt="Yoga en grupo">
+          </div>
+          <div class="yoga-caption">
+            <span class="yoga-caption-tag">Vinyasa Flow</span>
+            <h3>Clase abierta en el parque</h3>
+            <p>Cada primer domingo del mes nos encontramos al aire libre para practicar en comunidad.</p>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="carousel-item">
+          <div class="carousel-img-wrap">
+            <img src="https://images.unsplash.com/photo-1552196563-55cd4e45efb3?w=1200&q=80"
+                 alt="Taller de pranayama">
+          </div>
+          <div class="yoga-caption">
+            <span class="yoga-caption-tag">Pranayama</span>
+            <h3>Taller intensivo de respiración</h3>
+            <p>Un espacio profundo para aprender y experimentar las técnicas clásicas del control del prana.</p>
+          </div>
+        </div>
+
+      </div><!-- /carousel-inner -->
+
+      <!-- Controles -->
+      <button class="carousel-control-prev" type="button"
+              data-bs-target="#yogaCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button"
+              data-bs-target="#yogaCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+
+    </div><!-- /carousel -->
+
+  </div><!-- /container -->
+</section>
+
 
 <!--     <section class="section__container classes__container" id="classes">
       <p class="section__subheader">NUESTRAS CLASES</p>
@@ -198,7 +308,7 @@
     <div class="schedule-title-block">
             <h2 class="schedule-main-title">HORARIOS<br>CLASES</h2>
             <div class="schedule-dots">° ° ° ° ° ° ° ° ° ° ° ° °</div>
-            <div class="schedule-year">2026</div>
+            <div class="schedule-year"><em>2026</em></div>
         </div>
 <div class="grid-scroll-wrapper">
     <div class="schedule-grid">
@@ -442,10 +552,11 @@
       </div>
     </section>
  -->
-    <section class="section__container photos__container">
-      <p class="section__subheader">@espaciomalie</p>
-      <h2 class="section__header"></h2>
-      <div class="photos__grid">
+<!--     <section class="section__container photos__container">
+      <p class="section__subheader"><i class="ri-instagram-line" style="color: rgba(0, 0, 0, 0.562);"></i><a href="https://www.instagram.com/espaciomalie/" target="_blank" style="color: rgba(0, 0, 0, 0.557);"><em>espaciomalie</em></a></p>
+ --><!--       <h2 class="section__header"></h2>
+ -->      
+<!--  <div class="photos__grid">
         <div class="photos__card">
           <img src="assets/IMG_0021.JPG" alt="photo" />
         </div>
@@ -459,7 +570,90 @@
           <img src="assets/grupoprofes.jpg" alt="photo" />
         </div>
       </div>
-    </section>
+    </section>-->
+    <div class="phone-frame">
+
+  <!-- TOP BAR -->
+
+
+  <!-- PERFIL CENTRADO -->
+  <div class="profile-header">
+    <div class="avatar-ring">
+      <div class="avatar-inner">
+        <img
+          src="./assets/logomalie.png"
+          alt="Logo Espacio Malie"
+          onerror="this.style.display='none'; this.parentElement.querySelector('.avatar-letter').style.display='block'"
+        />
+        <span class="avatar-letter">M</span>
+      </div>
+    </div>
+
+<!--     <p class="profile-name">ESPACIO MALIE</p>
+ --><!--     <p class="profile-category">Estudio de Yoga</p>
+ -->
+
+    <p class="profile-slogan">
+      Un espacio para el cuerpo,<br>la mente y el alma.
+    </p>
+        <div class="divider"></div>
+    <button class="btn-follow">☾&nbsp;<a href="https://www.instagram.com/espaciomalie/" target="_blank">Seguinos</a> ☽</button>
+
+    <hr class="grid-sep"/>
+  </div>
+  <div class="grid">
+
+    <!-- FOTO 1 ↓ cambiá el src -->
+    <div class="post">
+      <img src="./assets/mery.jpg" alt="Foto 1 — reemplazá con tu imagen"/>
+      <div class="post-overlay">
+        <svg class="ov-icon" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l7.78-7.78a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      </div>
+    </div>
+
+    <!-- FOTO 2 ↓ cambiá el src -->
+    <div class="post">
+      <img src="./assets/IMG_0021.JPG" alt="Foto 2 — reemplazá con tu imagen"/>
+      <div class="post-overlay">
+        <svg class="ov-icon" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l7.78-7.78a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      </div>
+    </div>
+
+    <!-- FOTO 3 ↓ cambiá el src -->
+    <div class="post">
+      <img src="./assets/PAU.jpg" alt="Foto 3 — reemplazá con tu imagen"/>
+      <div class="post-overlay">
+        <svg class="ov-icon" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l7.78-7.78a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      </div>
+    </div>
+
+    <!-- FOTO 4 ↓ cambiá el src -->
+    <div class="post">
+      <img src="./assets/IMG_0039 (1).JPG" alt="Foto 4 — reemplazá con tu imagen"/>
+      <div class="post-overlay">
+        <svg class="ov-icon" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l7.78-7.78a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      </div>
+    </div>
+
+    <!-- FOTO 5 ↓ cambiá el src -->
+    <div class="post">
+      <img src="./assets/experiencia.JPG" alt="Foto 5 — reemplazá con tu imagen"/>
+      <div class="post-overlay">
+        <svg class="ov-icon" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l7.78-7.78a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      </div>
+    </div>
+
+    <!-- FOTO 6 ↓ cambiá el src -->
+    <div class="post">
+      <img src="./assets/claseyoga.png" alt="Foto 6 — reemplazá con tu imagen"/>
+      <div class="post-overlay">
+        <svg class="ov-icon" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l7.78-7.78a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      </div>
+    </div>
+
+  </div><!-- /grid -->
+
+</div><!-- /phone-frame -->
 
         <section class="banner">
       <div class="section__container banner__container">
@@ -475,9 +669,9 @@
         <div class="footer__col">
           <div class="footer__logo"><a href="#"><img src="./assets/MALIE LOGOS Blanco sin fondo.png" class="malie_logo"></a></div>
         </div>
-        <div class="footer__col">
-          <p>"Un espacio de renovación"</p>
-        </div>
+    <div class="top-bar">
+      <p>Reservá tu <a href="#horarios">primera clase</a> y da un <br>paso hacia tu bienestar.</p>
+    </div>      
         <div class="footer__col" id="contacto">
           <div class="footer__socials">
 <!--             <a href="#"><i class="ri-twitter-fill"></i></a>
@@ -538,5 +732,6 @@
             menuBtnIcon.setAttribute("class", "ri-menu-line");
           });
       </script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

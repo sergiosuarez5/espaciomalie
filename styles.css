@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import 'bootstrap/dist/css/bootstrap.min.css';
 :root {
   --primary-color: #c38c81;
   --primary-color-dark: #f7ebf3;
@@ -8,6 +9,27 @@
   --white: #ffffff;
   --max-width: 1200px;
 }
+
+ /* ── Paleta yoga ── */
+    :root {
+      --sage:    #7a9e7e;
+      --sand:    #e8dcc8;
+      --earth:   #8b6e52;
+      --cream:   #faf6f0;
+      --dark:    #2c2c2a;
+      --muted:   #6b6560;
+    }
+
+    :root {
+      --rose:   #e8c9bf;
+      --blush:  #f5ede9;
+      --sand:   #d4b8a8;
+      --warm:   #c49a86;
+      --text:   #3d2e28;
+      --muted:  #8a6f65;
+      --white:  #fdfaf8;
+      --border: #e6d5ce;
+    }
 
 * {
   padding: 0;
@@ -180,6 +202,180 @@ width: 80px;
   max-width: 475px;
   margin: auto;
 }
+
+/* ── Sección ── */
+    .yoga-carousel-section {
+      padding: 5rem 0 6rem;
+      background: #c38c8121;
+    }
+
+    /* ── Encabezado ── */
+    .section-eyebrow {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 400;
+      line-height: 1.15;
+      color: var(--dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .section-title em {
+      font-style: italic;
+      color: var(--primary-color);
+    }
+
+    .section-divider {
+      width: 48px;
+      height: 1.5px;
+      background: var(--sage);
+      border: none;
+      margin: 1.25rem 0 2.5rem;
+      opacity: 1;
+    }
+
+    /* ── Carrusel ── */
+    .yoga-carousel .carousel-inner {
+      border-radius: 16px;
+      overflow: hidden;
+      background: var(--sand);
+    }
+
+    .yoga-carousel .carousel-item {
+      position: relative;
+    }
+
+    /* Imagen */
+    .carousel-img-wrap {
+      width: 100%;
+      height: 500px;
+      overflow: hidden;
+    }
+
+    .carousel-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s ease;
+      filter: brightness(0.82);
+    }
+
+    .yoga-carousel .carousel-item.active .carousel-img-wrap img {
+      transform: scale(1.03);
+    }
+
+    /* Caption */
+    .yoga-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 2.5rem 2.5rem 2rem;
+      background: linear-gradient(to top, rgba(30,25,20,0.82) 0%, transparent 100%);
+      color: #fff;
+    }
+
+    .yoga-caption-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      background: var(--sage);
+      color: #fff;
+      padding: 3px 10px;
+      border-radius: 3px;
+      margin-bottom: 0.6rem;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    .yoga-caption h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+      font-weight: 400;
+      margin-bottom: 0.4rem;
+      line-height: 1.2;
+    }
+
+    .yoga-caption p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 300;
+      opacity: 0.9;
+      margin-bottom: 0;
+      max-width: 520px;
+    }
+
+    /* Controles */
+    .yoga-carousel .carousel-control-prev,
+    .yoga-carousel .carousel-control-next {
+      width: 48px;
+      height: 48px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 50%;
+      margin: 0 1rem;
+      opacity: 0.85;
+      transition: background 0.2s;
+    }
+
+    .yoga-carousel .carousel-control-prev:hover,
+    .yoga-carousel .carousel-control-next:hover {
+      background: rgba(255,255,255,0.28);
+      opacity: 1;
+    }
+
+    .yoga-carousel .carousel-control-prev-icon,
+    .yoga-carousel .carousel-control-next-icon {
+      width: 18px;
+      height: 18px;
+    }
+
+    /* Indicadores */
+    .yoga-carousel .carousel-indicators {
+      bottom: -2.2rem;
+      gap: 6px;
+    }
+
+    .yoga-carousel .carousel-indicators [data-bs-target] {
+      width: 28px;
+      height: 2.5px;
+      border-radius: 2px;
+      background: var(--earth);
+      opacity: 0.3;
+      border: none;
+      transition: opacity 0.3s, width 0.3s;
+    }
+
+    .yoga-carousel .carousel-indicators .active {
+      opacity: 1;
+      width: 42px;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .carousel-img-wrap {
+        height: 320px;
+      }
+      .yoga-caption {
+        padding: 1.5rem 1.25rem 1.25rem;
+      }
+      .yoga-carousel .carousel-control-prev,
+      .yoga-carousel .carousel-control-next {
+        margin: 0 0.25rem;
+      }
+    }
+
 
 .why__container {
   display: grid;
@@ -856,27 +1052,271 @@ iframe {
         bottom: 0 !important;
     }
 }
+
+    .phone-frame {
+      width: 100%;
+      max-width: 480px;
+      background: var(--white);
+      overflow: hidden;
+    }
+
+    /* ── TOP BAR ── */
+    .top-bar1 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 18px 10px;
+      border-bottom: 1px solid var(--border);
+      background: var(--white);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .top-bar1 .handle {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      font-weight: 500;
+      letter-spacing: .04em;
+    }
+    .top-bar1 .icons { display: flex; gap: 18px; opacity: .7; }
+    .top-bar1 .icons svg {
+      width: 22px; height: 22px;
+      fill: none; stroke: var(--text);
+      stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round;
+    }
+
+    /* ── PROFILE HEADER — centrado ── */
+    .profile-header {
+      padding: 36px 24px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    /* Avatar */
+    .avatar-ring {
+      width: 104px; height: 104px;
+      border-radius: 50%;
+      background: conic-gradient(var(--warm) 0%, var(--rose) 40%, var(--sand) 70%, var(--warm) 100%);
+      padding: 3px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 18px;
+    }
+    .avatar-inner {
+      width: 100%; height: 100%;
+      border-radius: 50%;
+      border: 3px solid var(--white);
+      overflow: hidden;
+      background: var(--blush);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .avatar-inner img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .avatar-letter {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.6rem;
+      color: var(--warm);
+      font-style: italic;
+      display: none;
+    }
+
+    /* Nombre */
+    .profile-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 500;
+      letter-spacing: .05em;
+      margin-bottom: 4px;
+    }
+
+    /* Categoría */
+    .profile-category {
+      font-size: .7rem;
+      color: var(--muted);
+      font-weight: 300;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    /* Línea decorativa */
+    .divider {
+      width: 36px;
+      height: 1px;
+      background: var(--sand);
+      margin: 0 auto 16px;
+    }
+
+    /* Slogan */
+    .profile-slogan {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem;
+      font-style: italic;
+      font-weight: 300;
+      color: var(--muted);
+      line-height: 1.65;
+      margin-bottom: 22px;
+      max-width: 270px;
+    }
+
+    /* Botón Seguínos */
+    .btn-follow {
+      background: var(--rose);
+      color: var(--text);
+      border: none;
+      padding: 11px 40px;
+      border-radius: 30px;
+      font-family: 'Jost', sans-serif;
+      font-size: .78rem;
+      font-weight: 500;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background .25s, transform .2s, box-shadow .25s;
+      box-shadow: 0 2px 12px rgba(196,154,134,.25);
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+    }
+    .btn-follow:hover {
+      background: var(--sand);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 18px rgba(196,154,134,.35);
+    }
+    .btn-follow:active { transform: translateY(0); }
+
+    /* Separador antes de la grilla */
+    .grid-sep {
+      width: 100%;
+      border: none;
+      border-top: 1px solid var(--border);
+      margin-top: 32px;
+    }
+
+    /* ── GRID 3×2 ── */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+    .post {
+      position: relative;
+      aspect-ratio: 1;
+      overflow: hidden;
+      cursor: pointer;
+      background: var(--blush);
+    }
+    .post img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform .45s ease;
+    }
+    .post:hover img { transform: scale(1.06); }
+
+    .post-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(61,46,40,.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity .3s ease;
+    }
+    .post:hover .post-overlay { opacity: 1; }
+    .ov-icon {
+      width: 30px; height: 30px;
+      fill: rgba(255,255,255,.9);
+    }
+
+    /* ── MOBILE RESPONSIVE ── */
+    @media (max-width: 480px) {
+
+      .phone-frame {
+        max-width: 100%;
+        width: 100%;
+      }
+
+      .top-bar1 {
+        padding: 12px 16px 10px;
+      }
+
+      .top-bar1 .handle {
+        font-size: 1.05rem;
+      }
+
+      .top-bar1 .icons svg {
+        width: 20px; height: 20px;
+      }
+
+      .profile-header {
+        padding: 28px 20px 20px;
+      }
+
+      .avatar-ring {
+        width: 90px; height: 90px;
+        margin-bottom: 14px;
+      }
+
+      .profile-name {
+        font-size: 1.35rem;
+      }
+
+      .profile-category {
+        font-size: .65rem;
+        margin-bottom: 12px;
+      }
+
+      .divider {
+        margin-bottom: 12px;
+      }
+
+      .profile-slogan {
+        font-size: .95rem;
+        margin-bottom: 18px;
+        max-width: 240px;
+      }
+
+      .btn-follow {
+        padding: 10px 34px;
+        font-size: .72rem;
+      }
+
+      .grid-sep {
+        margin-top: 26px;
+      }
+
+      .post-overlay {
+        display: none;
+      }
+    }
 /* ========== SCROLL UP ========== */
 /* Contenedor del Scroll Up */
 .scroll-up {
   position: fixed;
-  right: 20px;            /* Alineado a la derecha igual que el de WhatsApp */
-  bottom: 20px;           /* Distancia desde el suelo de la pantalla */
-  background-color: var(--primary-color); /* Color de fondo (cámbialo a tu gusto) */
-  color: #fff;            /* Color de la flecha */
-  padding: 15px;
+  right: 20px;
+  bottom: 20px;
+  background-color: var(--primary-color);
+  color: #fff;
+  width: 48px;           /* ✅ ancho fijo */
+  height: 48px;          /* ✅ alto igual al ancho = círculo perfecto */
   display: flex;
-  border-radius: 50%;     /* Lo hace circular */
-  font-size: 1.3rem;      /* Tamaño de la flecha */
-  z-index: 1000;          /* Para que siempre esté por encima de otros elementos */
-  transition: .4s;        /* Animación suave al pasar el mouse */
+  align-items: center;   /* ✅ centra el ícono verticalmente */
+  justify-content: center; /* ✅ centra el ícono horizontalmente */
+  border-radius: 50%;
+  font-size: 1.3rem;
+  z-index: 1000;
+  transition: .4s;
   text-decoration: none;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para destacar */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Efecto Hover */
 .scroll-up:hover {
-  transform: translateY(-5px); /* Pequeño salto al poner el mouse */
+  transform: translateY(-5px);
   background-color: #444;
 }
 
