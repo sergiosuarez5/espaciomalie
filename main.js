@@ -89,3 +89,21 @@ function closeWA() {
 }
 
 
+// Nav transparente al scrollear, normal al detenerse
+let scrollTimer = null;
+
+window.addEventListener("scroll", () => {
+  const nav = document.querySelector("nav");
+
+  // Al empezar a scrollear → transparente
+  nav.classList.add("scrolling");
+
+  // Limpia el timer anterior
+  clearTimeout(scrollTimer);
+
+  // Al detenerse (300ms sin scroll) → vuelve al color normal
+  scrollTimer = setTimeout(() => {
+    nav.classList.remove("scrolling");
+  }, 300);
+});
+
